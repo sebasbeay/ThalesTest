@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>Employee List</h2>
+    <p class="text-info">Please enter an employee ID in order to search for a specific employee.</p>
+    <input type="number" id="txtEmployeeId">
+    <button class="btn btn-primary" onclick="searchEmployees()">Search</button>
+</div>
+
+<div class="row">
+    <table id="table-employees" class="table table-bordered table-striped">
+        <thead class="bg-default">
+            <tr>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Age</th>
+                <th>Anual Salary</th>
+                <th>Profile Image</th>
+            </tr>
+        </thead>
+        <tbody id="tbody-employees">
+        </tbody>
+    </table>
+</div>
+
+
+<script src="@Url.Content("~/Scripts/Employees.js")"></script>
